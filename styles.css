@@ -1,0 +1,226 @@
+:root {
+    --text-color: black;
+    --link-color: blue;
+    --background-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a:nth-child(3) {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 50px;
+    gap: 35px;
+    margin-bottom: 70px;
+}
+
+.hero-section .text {
+    flex: 6;
+}
+
+.hero-section .headshot {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .headshot img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-section .text h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.hero-section .text p {
+    font-size: 16px;
+    line-height: 27px;
+    text-align: justify;
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    transition: .2s;
+}
+
+.hero-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    object-fit: contain;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+  }
+
+
+/* Responsive Design */
+@media (max-width: 770px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a:nth-child(3) {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    nav .right a span {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-section .headshot img {
+        width: 325px;
+        height: 330px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+
+    .hero-section .text h4 {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .skills-section {
+        padding: 0 20px;
+    }
+}
